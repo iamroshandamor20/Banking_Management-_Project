@@ -180,6 +180,7 @@ def main():
         print()
         mobile = input("Enter Your Mobile Number: \t")
         email = input("Enter Your Personal Email: \t")
+        
 #calling all Function to validate inputs
         result1 = namecheck(name)
         result2 = namecheck(fathername)
