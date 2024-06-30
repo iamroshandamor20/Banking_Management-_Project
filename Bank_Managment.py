@@ -1,32 +1,255 @@
 # Global Variable Storing Data of users
-users ={
-    "user1" : {
-        "id" : "7414728598",
-        "pass" : "181912",
-        "acno" : "01975876944",
-        "ifsc" : "HDRPD8000",
+users = {
+    "user1": {
+        "id": "7414728598",
+        "pass": "181912",
+        "acno": "01975876944",
+        "ifsc": "HDRPD8000",
         "aadhar": "741472859846",
-        "pan" : "HDRPD9091R",
-        "name" : "Arti Damor",
-        "age" : "19",
-        "farthername" : "Dulesing Damor",
-        "mothername" : "Baijayanti Damor",
-        "address": "16, kaushlyapuri, Indore",
-        "bankbalance" : "₹12244",
-        "transactions" : {
-            "18/10/2024" : {"c": "₹550"},
-            "17/10/2023" : {"d": "₹1550"},
-            "16/10/2022" : {"w": "₹2000"},
-            "15/10/2024" : {"c": "₹550"},
-            "14/10/2023" : {"d": "₹1550"},
-            "13/10/2022" : {"w": "₹2000"},
-            "12/10/2024" : {"c": "₹550"},
-            "11/10/2023" : {"d": "₹1550"},
-            "10/10/2022" : {"w": "₹2000"}
-        },
+        "pan": "HDRPD9091R",
+        "name": "Arti Damor",
+        "age": "19",
+        "farthername": "Dulesing Damor",
+        "mothername": "Baijayanti Damor",
+        "address": "16, Kaushlyapuri, Indore",
+        "bankbalance": "₹12244",
+        "transactions": {
+            "18/10/2024": {"c": "₹550"},
+            "17/10/2023": {"d": "₹1550"},
+            "16/10/2022": {"w": "₹2000"},
+            "15/10/2024": {"c": "₹550"},
+            "14/10/2023": {"d": "₹1550"},
+            "13/10/2022": {"w": "₹2000"},
+            "12/10/2024": {"c": "₹550"},
+            "11/10/2023": {"d": "₹1550"},
+            "10/10/2022": {"w": "₹2000"}
+        }
+    },
+    "user2": {
+        "id": "8293027456",
+        "pass": "928347",
+        "acno": "02748293047",
+        "ifsc": "XYZB1234",
+        "aadhar": "928374856390",
+        "pan": "JKLPO9876M",
+        "name": "Rohit Sharma",
+        "age": "25",
+        "farthername": "Mahesh Sharma",
+        "mothername": "Sunita Sharma",
+        "address": "23, Gokulpuri, Mumbai",
+        "bankbalance": "₹45200",
+        "transactions": {
+            "12/01/2024": {"c": "₹800"},
+            "11/01/2023": {"d": "₹3000"},
+            "10/01/2022": {"w": "₹5000"},
+            "09/01/2024": {"c": "₹1200"},
+            "08/01/2023": {"d": "₹700"},
+            "07/01/2022": {"w": "₹3000"},
+            "06/01/2024": {"c": "₹500"},
+            "05/01/2023": {"d": "₹2500"},
+            "04/01/2022": {"w": "₹1000"}
+        }
+    },
+    "user3": {
+        "id": "6382938475",
+        "pass": "192837",
+        "acno": "03847592018",
+        "ifsc": "PNBS1234",
+        "aadhar": "758392047182",
+        "pan": "QWERT5678T",
+        "name": "Simran Kaur",
+        "age": "30",
+        "farthername": "Gurpreet Singh",
+        "mothername": "Manjeet Kaur",
+        "address": "45, Pritam Nagar, Ludhiana",
+        "bankbalance": "₹60000",
+        "transactions": {
+            "23/02/2024": {"c": "₹1000"},
+            "22/02/2023": {"d": "₹4000"},
+            "21/02/2022": {"w": "₹6000"},
+            "20/02/2024": {"c": "₹1500"},
+            "19/02/2023": {"d": "₹2500"},
+            "18/02/2022": {"w": "₹3000"},
+            "17/02/2024": {"c": "₹700"},
+            "16/02/2023": {"d": "₹3500"},
+            "15/02/2022": {"w": "₹1200"}
+        }
+    },
+    "user4": {
+        "id": "2938475647",
+        "pass": "091827",
+        "acno": "02938475618",
+        "ifsc": "HDFCS123",
+        "aadhar": "293847561829",
+        "pan": "XYZRP9876R",
+        "name": "Arjun Verma",
+        "age": "35",
+        "farthername": "Rakesh Verma",
+        "mothername": "Maya Verma",
+        "address": "56, Shantivan, Delhi",
+        "bankbalance": "₹75000",
+        "transactions": {
+            "05/03/2024": {"c": "₹2000"},
+            "04/03/2023": {"d": "₹5000"},
+            "03/03/2022": {"w": "₹7000"},
+            "02/03/2024": {"c": "₹2500"},
+            "01/03/2023": {"d": "₹3000"},
+            "28/02/2022": {"w": "₹4000"},
+            "27/02/2024": {"c": "₹1000"},
+            "26/02/2023": {"d": "₹4500"},
+            "25/02/2022": {"w": "₹1500"}
+        }
+    },
+    "user5": {
+        "id": "1928374650",
+        "pass": "647382",
+        "acno": "01928374655",
+        "ifsc": "ICICS1234",
+        "aadhar": "918273645019",
+        "pan": "LKJHG9876D",
+        "name": "Neha Jain",
+        "age": "28",
+        "farthername": "Prakash Jain",
+        "mothername": "Radha Jain",
+        "address": "78, Green Park, Bangalore",
+        "bankbalance": "₹50000",
+        "transactions": {
+            "10/04/2024": {"c": "₹1500"},
+            "09/04/2023": {"d": "₹2000"},
+            "08/04/2022": {"w": "₹3000"},
+            "07/04/2024": {"c": "₹1000"},
+            "06/04/2023": {"d": "₹2500"},
+            "05/04/2022": {"w": "₹2000"},
+            "04/04/2024": {"c": "₹500"},
+            "03/04/2023": {"d": "₹1500"},
+            "02/04/2022": {"w": "₹1000"}
+        }
+    },
+    "user6": {
+        "id": "6473829102",
+        "pass": "829374",
+        "acno": "01726384901",
+        "ifsc": "SBI1234S",
+        "aadhar": "827364819201",
+        "pan": "MNBVC9876U",
+        "name": "Vikram Singh",
+        "age": "32",
+        "farthername": "Rajendra Singh",
+        "mothername": "Savitri Singh",
+        "address": "12, Ashok Nagar, Jaipur",
+        "bankbalance": "₹65000",
+        "transactions": {
+            "22/05/2024": {"c": "₹2000"},
+            "21/05/2023": {"d": "₹4000"},
+            "20/05/2022": {"w": "₹6000"},
+            "19/05/2024": {"c": "₹2500"},
+            "18/05/2023": {"d": "₹3000"},
+            "17/05/2022": {"w": "₹3500"},
+            "16/05/2024": {"c": "₹1000"},
+            "15/05/2023": {"d": "₹4500"},
+            "14/05/2022": {"w": "₹1500"}
+        }
+    },
+    "user7": {
+        "id": "9182736450",
+        "pass": "102938",
+        "acno": "01637485920",
+        "ifsc": "AXIS1234",
+        "aadhar": "746382910273",
+        "pan": "PLKJH9876A",
+        "name": "Rita Desai",
+        "age": "29",
+        "farthername": "Nilesh Desai",
+        "mothername": "Mona Desai",
+        "address": "34, Sundar Nagar, Surat",
+        "bankbalance": "₹58000",
+        "transactions": {
+            "15/06/2024": {"c": "₹3000"},
+            "14/06/2023": {"d": "₹4500"},
+            "13/06/2022": {"w": "₹5000"},
+            "12/06/2024": {"c": "₹2000"},
+            "11/06/2023": {"d": "₹3500"},
+            "10/06/2022": {"w": "₹4000"},
+            "09/06/2024": {"c": "₹1500"},
+        }
+    },
+    "user8": {
+        "id": "5647382910",
+        "pass": "284756",
+        "acno": "02384756109",
+        "ifsc": "BOBS1234",
+        "aadhar": "384756182034",
+        "pan": "ZXCVB1234T",
+        "name": "Anil Kumar",
+        "age": "40",
+        "farthername": "Ram Kumar",
+        "mothername": "Sita Devi",
+        "address": "22, Gandhi Road, Patna",
+        "bankbalance": "₹72000",
+        "transactions": {
+            "05/07/2024": {"c": "₹4000"},
+            "04/07/2023": {"d": "₹3000"},
+            "03/07/2022": {"w": "₹2000"},
+            "02/07/2024": {"c": "₹5000"},
+            "01/07/2023": {"d": "₹2000"},
+            "30/06/2022": {"w": "₹3000"},
+            "29/06/2024": {"c": "₹2500"},
+            "28/06/2023": {"d": "₹3500"},
+            "27/06/2022": {"w": "₹4000"}
+        }
+    },
+    "user9": {
+        "id": "3829105647",
+        "pass": "485762",
+        "acno": "02748593014",
+        "ifsc": "IDBIS1234",
+        "aadhar": "294857182037",
+        "pan": "ASDFG1234H",
+        "name": "Meena Reddy",
+        "age": "34",
+        "farthername": "Ramesh Reddy",
+        "mothername": "Lakshmi Reddy",
+        "address": "67, Jubilee Hills, Hyderabad",
+        "bankbalance": "₹82000",
+        "transactions": {
+            "18/08/2024": {"c": "₹3500"},
+            "17/08/2023": {"d": "₹4000"},
+            "16/08/2022": {"w": "₹5000"},
+            "15/08/2024": {"c": "₹2000"},
+            "14/08/2023": {"d": "₹3500"},
+            "13/08/2022": {"w": "₹3000"},
+            "12/08/2024": {"c": "₹1000"},
+            "11/08/2023": {"d": "₹4500"},
+            "10/08/2022": {"w": "₹1500"}
+        }
+    },
+    "user10": {
+        "id": "1029384756",
+        "pass": "374859",
+        "acno": "01928375604",
+        "ifsc": "HDFCS1234",
+        "aadhar": "182736495028",
+        "pan": "QWERT5678L",
+        "name": "Suresh Patel",
+        "age": "38",
+        "farthername": "Raghav Patel",
+        "mothername": "Kamla Patel",
+        "address": "54, Bopal, Ahmedabad",
+        "bankbalance": "₹96000",
+        "transactions": {
+            "29/09/2024": {"c": "₹4500"},
+            "28/09/2023": {"d": "₹5000"},
+            "27/09/2022": {"w": "₹3000"},
+            "26/09/2024": {"c": "₹6000"},
+            "25/09/2023": {"d": "₹2500"},
+            "24/09/2022": {"w": "₹4000"},
+            "23/09/2024": {"c": "₹3000"},
+            "22/09/2023": {"d": "₹2000"},
+            "21/09/2022": {"w": "₹1000"}
+        }
     }
 }
-
+           
 
 # Function to check whether user and its password is correct
 def login(logid, logpass):
@@ -85,12 +308,102 @@ def emailcheck(email):
             return True
     return False
 
+# Funtion for Life Insurance
+def lifeinsurancecheck(type):
+    print("h")
+
+# Funtion for Health Insurance
+def healthinsurancecheck(type):
+    print("hii")
+
+# Function for Motor Insurance
+def motorinsurancecheck(type):
+    print("Jai")
+
+# Funtion for Pocket insurance
+def pocketinsurancecheck(type):
+    print("kya")
+
+# Funtion for insurance
+def insurance():
+    print("\t\t\t **Select Insurance **")
+    loopcondition = True
+    while loopcondition is True:
+        print()
+        print()
+        insurancecondition1 = int(input("\t Type (1) for Life Insurance \t\t Type (2) for General Insurance\n\t"))
+        if insurancecondition1 == 1:
+            lifeinsurance = int(input("\t Type (1) for Whole Life Plan \t Type (2) for Term Plan \t Type (3) for Unit Linked Insurance Plan \n\t"))
+            if lifeinsurance == 1:
+                typeinsurance = 1
+                lifeinsurancecheck(typeinsurance)
+            elif lifeinsurance == 2:
+                typeinsurance = 2
+                lifeinsurancecheck(typeinsurance)
+            elif lifeinsurance == 3:
+                typeinsurance = 3
+                lifeinsurancecheck(typeinsurance)
+            else:
+                print("Wrong Option")
+        elif insurancecondition1 == 2:
+            genralinsurance = int(input("\t Type (1) for Health Insurance \t Type (2) for Motor Insurance \t Type (3) for Home Insurance \t Type (4) for Pocket Insurance"))
+            if genralinsurance ==1:
+                healthinsurance = int(input("\t Type (1) for Individual Health Insurance \t Type (2) Family Health Insurance \t Type (3) for Sr. Citizens Insurance "))
+                if healthinsurance ==1:
+                    typeinsurance =1
+                    healthinsurancecheck(typeinsurance)
+                elif healthinsurance ==2:
+                    typeinsurance =2
+                    healthinsurancecheck(typeinsurance)
+                elif healthinsurance ==3:
+                    typeinsurance =3
+                    healthinsurancecheck(typeinsurance)
+                else:
+                    print("Wrong option")
+
+            elif genralinsurance ==2:
+                motorinsurance = int(input("\t Type (1) for Two Wheeler Insurance \t Type (2) for Car Insurance \t Type (3) for Commercial Vehicle Insurance"))
+                if motorinsurance ==1:
+                    typeinsurance =1
+                    motorinsurancecheck(typeinsurance)
+                elif motorinsurance ==2:
+                    typeinsurance =2
+                    motorinsurancecheck(typeinsurance)
+                elif motorinsurance ==3:
+                    typeinsurance =3
+                    motorinsurancecheck(typeinsurance)
+                else:
+                    print("Wrong option")
+
+            elif genralinsurance ==3:
+                typeinsurance = 'homeinsurance'
+            elif genralinsurance ==4:
+                pocketinsurance = int(input("\t Type (1) for Laptop Insurance \t Type (2) for Smartphone Insurance \t Type (3) for Tech Accesories Insurance"))
+                if pocketinsurance ==1:
+                    typeinsurance =1
+                    pocketinsurancecheck(typeinsurance)
+                elif pocketinsurance ==2:
+                    typeinsurance =2
+                    pocketinsurancecheck(typeinsurance)
+                elif pocketinsurance ==3:
+                    typeinsurance =3
+                    pocketinsurancecheck(typeinsurance)
+                else:
+                    print("Wrong option")
+
+            else:
+                print("Wrong Option Selected")
+        
+        else:
+            print("Wrong Option Selected")
+        int(input("Type (55) to See "))
+
 
 # Function to get all details of Existing User
 def useraccount(logid):
     
     loopcondition = True
-    while loopcondition:
+    while loopcondition is True:
         print()
         print("\t Type (1) to Check Bank Balance \t Type (2) for Account Statement \t Type (3) to Money Transfer ")
         print("\t Type (4) to Buy Insurance Policy \t Type (5) to Avail Loan \t Type (6) to Log Out Your Account")
@@ -110,6 +423,7 @@ def useraccount(logid):
 
         elif bankingoption == 4:
                 print("\t\t **Insurance **")
+                insurance()
 
         elif bankingoption == 5:
                 print("\t\t ** Avail Loan **")
