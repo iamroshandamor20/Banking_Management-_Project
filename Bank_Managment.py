@@ -271,14 +271,7 @@ def namecheck(name):
             return False
     Result = True
     return True
-
-# Function to check Options Validation
-def optioncheck(option):
-    if option == 1 and option == 2 and option == 3:
-        return True
-    else:
-        return False
-    
+   
  # Function to check Empty Validation 
 def emptycheck(para):
     lenght = len(para)
@@ -308,23 +301,43 @@ def emailcheck(email):
             return True
     return False
 
-# Funtion for Life Insurance
+# Function for Life Insurance
 def lifeinsurancecheck(type):
-    print("h")
+    print("\t\t ** Life Insurance Eligibility")
 
-# Funtion for Health Insurance
+# Function for Health Insurance
 def healthinsurancecheck(type):
-    print("hii")
+    print("\t\t ** Health Insurance Eligibility")
 
 # Function for Motor Insurance
 def motorinsurancecheck(type):
-    print("Jai")
+    print("\t\t ** Motor Insurance Eligibility")
 
-# Funtion for Pocket insurance
+# Function for Pocket insurance
 def pocketinsurancecheck(type):
-    print("kya")
+    print("\t\t ** Pocket Insurance Eligibility")
 
-# Funtion for insurance
+# Function for Home Loan check
+def homeloancheck(typeloan):
+    print("\t\t **Home Loan Eligibility")
+
+
+# Function for Gold Loan check
+def goldloancheck(typeloan):
+    print("\t\t **Gold Loan Eligibility")
+
+
+# Function for Personal Loan check
+def personalloancheck(typeloan):
+    print("\t\t **Personal Loan Eligibility")
+
+
+# Function for Bussiness Loan Check
+def businessloancheck(typeloan):
+    print("\t\t **Business Loan Eligibility")
+
+
+# Funtion for insurance Selection
 def insurance():
     print("\t\t\t **Select Insurance **")
     loopcondition = True
@@ -396,8 +409,46 @@ def insurance():
         
         else:
             print("Wrong Option Selected")
-        int(input("Type (55) to See "))
+        loopend=int(input("Type (55) to Restart It \t Type (44) to Exit"))
+        if loopend == 44:
+            loopcondition=False
 
+# Function for loan Selection
+def loan():
+    print("\t\t\t ** Select Loan **")
+    loopcondition = True
+    while loopcondition is True:
+        print()
+        print()
+        loancondition = int(input("\t Type (1) for Secured Loans \t\t Type (2) for Unsecured Loans\n\t"))
+        if loancondition == 1:
+            securedloancondition = int(input("\t Type (1) for Home Loan \t Type (2) for Gold Loan\n\t"))
+            if securedloancondition ==1:
+                typeloan =1
+                homeloancheck(typeloan)
+            
+            elif securedloancondition ==2:
+                typeloan =2
+                goldloancheck(typeloan)
+
+            else:
+                print("Wrong Option")
+
+        elif loancondition ==2:
+            unsecuredloancondition = int(input("\t Type (1) for Personal Loan \t Type (2) for Business Loan\n\t"))
+            if unsecuredloancondition ==1:
+                typeloan =1
+                personalloancheck(typeloan)
+
+            elif unsecuredloancondition ==2:
+                typeloan =2
+                businessloancheck(typeloan)
+            
+            else:
+                print("Wrong Option")
+
+        else:
+            print("Wrong Option")
 
 # Function to get all details of Existing User
 def useraccount(logid):
@@ -422,11 +473,12 @@ def useraccount(logid):
                 print("Transfer Your Money")
 
         elif bankingoption == 4:
-                print("\t\t **Insurance **")
+                print("\t\t\t **Insurance **")
                 insurance()
 
         elif bankingoption == 5:
                 print("\t\t ** Avail Loan **")
+                loan()
 
         elif bankingoption == 6:
                 print("Thank you For Using Online Banking Service")
@@ -464,7 +516,19 @@ def main():
         name = input("Enter Your Name (Same As Your ID Proof): \t")
         dob = input("Enter Date of Birth (DDMMYYYY Format): \t")
         gender = int(input("Type (1) for Male \t Type (2) for Female \t Type (3) for Third Gender: \t"))
+        if gender == 1 and 2 and 3:
+            result12 = True
+
+        else:
+            result12 =False
+
         maritalstatus = int(input("Type (1) for Married \t Type (2) for Unmarried \t Type (3) for Other: \t"))
+        if maritalstatus == 1 and 2 and 3:
+            result13 = True
+
+        else:
+            result13 = False
+
         dependers = input("Number of Dependers: \t")
         nameof = int(input("Type (1) for Father \t Type (2) for Mother \t Type (3) for Spouse: \t"))
         if nameof == 1:
@@ -485,12 +549,51 @@ def main():
 
         guardianname = input("Enter Your Guardian's Name: \t")
         relation = input("Enter your Relation With Guardian: \t")
-        citizenship = int(input("Type (1) for Indian \t Type (2) for Non Resident Indian \t Type (3) for Others: \t"))
+        citizenship = int(input("Type (1) for Indian \t Type (2) for Non Resident Indian \t Type (3) for Others \n\t:"))
+        if citizenship == 1 or 2 or 3:
+            result14 = True
+        
+        else:
+            result14 = False
         print()
-        occupation = input("Enter Your Occupation: \t")
-        income = input("Enter Your Annual Income: \t")
-        religion = input("Enter Your Religion: \t")
-        education = int(input("Type (1) for Below 12th \t Type (2) for Graduated \t Type (3) for None: \t"))
+        occupation = int(input("Select Occupation : Type (1) for Student\t Type (2) for Self Employed \t Type (3) for Salried\n\t:"))
+        if occupation ==1:
+            result11=True
+
+
+        elif occupation ==2:
+            income = int(input("Enter Your Annual Income : \n\t:"))
+            if income<200000:
+                result11=True
+
+            else:
+                result11=False
+        
+        elif occupation ==3:
+            income = int(input("Enter Your Monthly Salary \n\t:"))
+            if income<25000:
+                result11=True
+            
+            else:
+                result11=False
+
+        else:
+            print("wrong option")
+
+        religion = int(input("Choose Religion : Type (1) for Hindu\t Type (2) for Muslim \t Type (3) for Others \n\t:"))
+        if religion == 1 or 2 or 3:
+            result15 = True
+        
+        else:
+            result15 = False
+        
+        education = int(input("Type (1) for Below 12th \t Type (2) for Graduated \t Type (3) for None \n\t"))
+        if education == 1 or 2 or 3:
+            result16 = True
+
+        else:
+            result16 = False
+
         print()
         mobile = input("Enter Your Mobile Number: \t")
         email = input("Enter Your Personal Email: \t")
@@ -501,20 +604,16 @@ def main():
         result3 = namecheck(mothername)
         result4 = namecheck(spousename)
         result5 = namecheck(guardianname)
-        result6 = optioncheck(gender)
-        result7 = optioncheck(maritalstatus)
-        result8 = optioncheck(education)
-        result9 = optioncheck(citizenship)
-        result10 = emptycheck(dependers)
-        result11 = emptycheck(relation)
-        result12 = emptycheck(occupation)
-        result13 = emptycheck(income)
-        result14 = emptycheck(religion)
-        result15 = dobcheck(dob)
-        result16 = mobilecheck(mobile)
-        result17 = emailcheck(email)
+        result6 = emptycheck(dependers)
+        result7 = emptycheck(relation)
+        result8 = emptycheck(dob)
+        result9 = mobilecheck(mobile)
+        result10 = emailcheck(email)
+        print(result1,result2,result3,result4,result5,result6,result7,result8,result9,result10,result11,result12,result13,result14,result15,result16)
 
-        if (result1 and result2 and result3 and result4 and result5 and result6 and result7 and result8 and result9 and result10 and result11 and result12 and result13 and result14 and result15 and result16 and result17) is True:
+        
+
+        if (result1 and result2 and result3 and result4 and result5 and result6 and result7 and result8 and result9 and result10 and result11 and result12 and result13 and result14 and result15 and result16) is True:
             print("Account Opened successfully")
             print("Soon You will get Massege with Password and Id")
         else:
