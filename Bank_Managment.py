@@ -304,37 +304,145 @@ def emailcheck(email):
 # Function for Life Insurance
 def lifeinsurancecheck(type):
     print("\t\t ** Life Insurance Eligibility")
+    if type ==1:
+        print("\t\t\tWhole Life Insurance")
+    else:
+        print("\t\t\t Term Life Insurance")
+
+    age=int(input("Enter Your Age :"))
+    if age<18 or age>75:
+        return False
+    income=int(input("Enter Your Monthly Income :"))
+    if income<20000:
+        return False
+    health=int(input("Type (1) If You Have Pre Existing Medical Conditions or Your Have Smoking/Tobacco Use"))
+    hobbies=int(input("Type (1) If You Engage in Risky Hobbies like Extreme Sports, Skydiving ETC."))
+    obligation=int(input("Type (1) If Your EMI is More than 50% of Your Salary"))
+
 
 # Function for Health Insurance
 def healthinsurancecheck(type):
     print("\t\t ** Health Insurance Eligibility")
+    if type ==1:
+        print("\t\t\tFamily Health Insurance")
+    else:
+        print("\t\t\t Individual Health Insurance")
+
+    age=int(input("Enter Your Age :"))
+    if age<18 or age>75:
+        return False
+    income=int(input("Enter Your Monthly Income :"))
+    if income<20000:
+        return False
+    
+    health=int(input("Type (1) If You Have Pre Existing Medical Conditions or Your Have Smoking/Tobacco Use"))
+    dependent=int(input("How many Family Members do you have"))
+
 
 # Function for Motor Insurance
 def motorinsurancecheck(type):
     print("\t\t ** Motor Insurance Eligibility")
+    if type ==1:
+        print("\t\t\tTwo Wheeler Insurance")
+    else:
+        print("\t\t\t Car Insurance")
 
-# Function for Pocket insurance
-def pocketinsurancecheck(type):
-    print("\t\t ** Pocket Insurance Eligibility")
+    age=int(input("Enter Your Age :"))
+    if age<18 :
+        return False
+    
+    vhecleage=int(input("Enter Your Vehicale Age:"))
+    if vhecleage>15:
+        return False
+    regi=input("Enter Your Vehicle Registration No. :")
+
 
 # Function for Home Loan check
 def homeloancheck(typeloan):
     print("\t\t **Home Loan Eligibility")
+    age=int(input("Enter Your Age :"))
+    if age<21 or age>65:
+        return False
+    income=int(input("Enter Your Monthly Income :"))
+    if income<20000:
+        return False
+    otheremi=int(input("Enter Total Other Emi (if any or enter 0) :"))
+    if otheremi>(income/2):
+        return False
+    tenure=int(input("In Years Enter Tenure (Max :30):"))
+    loaneligibilty=(((income/2)-otheremi)*(tenure*12))-(((income/2)-otheremi)*(tenure*12))*1/4
+    print("You are Eligible for loan")
+    print("Your Loan Eligibility :",loaneligibilty)
 
 
 # Function for Gold Loan check
 def goldloancheck(typeloan):
     print("\t\t **Gold Loan Eligibility")
+    karat=int(input("Type (1) for 24 Karat \t Type(2) for 22 Karat \t Type (3) for 20 Karat \t Type (4) for 18 Karat \n\t"))
+    if karat ==1:
+        weight=int(input("Enter Weight in Grams \n\t:"))
+        price=7000
+        loaneligibility=(price*weight)-(price*weight)*1/5
+        print("You Loan Eligibilty is :",loaneligibility)
+    elif karat ==2:
+        weight=int(input("Enter Weight in Grams \n\t:"))
+        price=6600
+        loaneligibility=(price*weight)-(price*weight)*1/4.5
+        print("You Loan Eligibilty is :",loaneligibility)
+    elif karat ==3:
+        weight=int(input("Enter Weight in Grams \n\t:"))
+        price=6000
+        loaneligibility=(price*weight)-(price*weight)*1/4
+        print("You Loan Eligibilty is :",loaneligibility)
+    elif karat ==4:
+        weight=int(input("Enter Weight in Grams \n\t:"))
+        price=5400
+        loaneligibility=(price*weight)-(price*weight)*1/3
+        print("You Loan Eligibilty is :",loaneligibility)
+    else:
+        print("Wrong Option / No loan Available")
+
 
 
 # Function for Personal Loan check
 def personalloancheck(typeloan):
     print("\t\t **Personal Loan Eligibility")
+    age=int(input("Enter Your Age :"))
+    if age<18 or age>75:
+        return False
+    income=int(input("Enter Your Monthly Income :"))
+    if income<25000:
+        return False
+    otheremi=int(input("Enter Total Other Emi (if any or enter 0) :"))
+    if otheremi>(income/2):
+        return False
+    tenure=int(input("In Years Enter Tenure (Max :30):"))
+    if tenure>30:
+        return
+    loaneligibilty=(((income/2)-otheremi)*(tenure*12))-(((income/2)-otheremi)*(tenure*12))*1/3
+    print("You are Eligible for loan")
+    print("Your Loan Eligibility :",loaneligibilty)
 
 
 # Function for Bussiness Loan Check
 def businessloancheck(typeloan):
     print("\t\t **Business Loan Eligibility")
+    age=int(input("Enter Your Age :"))
+    if age<18 or age>75:
+        return False
+    income=int(input("Enter Your Annual Bussiness Income :"))
+    if income<250000:
+        return False
+    otheremi=int(input("Enter Total Other Emi (if any or enter 0) :"))
+    if otheremi>(income/2):
+        return False
+    tenure=int(input("In Years Enter Tenure (Max :5):"))
+    if tenure>5:
+        return False
+    loaneligibilty=(((income/2)-otheremi)*(tenure*12))-(((income)-otheremi)*(tenure*12))*1/5
+    print("You are Eligible for loan")
+    print("Your Loan Eligibility :",loaneligibilty)
+
 
 
 # Funtion for insurance Selection
@@ -346,61 +454,65 @@ def insurance():
         print()
         insurancecondition1 = int(input("\t Type (1) for Life Insurance \t\t Type (2) for General Insurance\n\t"))
         if insurancecondition1 == 1:
-            lifeinsurance = int(input("\t Type (1) for Whole Life Plan \t Type (2) for Term Plan \t Type (3) for Unit Linked Insurance Plan \n\t"))
+            lifeinsurance = int(input("\t Type (1) for Whole Life Plan \t Type (2) for Term Plan\n\t"))
             if lifeinsurance == 1:
                 typeinsurance = 1
-                lifeinsurancecheck(typeinsurance)
+                res1=lifeinsurancecheck(typeinsurance)
+                if res1 is False:
+                    print("Your Are Note Eligible for Insurance")
+                else:
+                    print("You Are Eligible soon You Will Get Call from Our Agent")
+
+
             elif lifeinsurance == 2:
                 typeinsurance = 2
-                lifeinsurancecheck(typeinsurance)
-            elif lifeinsurance == 3:
-                typeinsurance = 3
-                lifeinsurancecheck(typeinsurance)
+                res2=lifeinsurancecheck(typeinsurance)
+                if res2 is False:
+                    print("Your Are Note Eligible for Insurance")
+
+
             else:
                 print("Wrong Option")
         elif insurancecondition1 == 2:
-            genralinsurance = int(input("\t Type (1) for Health Insurance \t Type (2) for Motor Insurance \t Type (3) for Home Insurance \t Type (4) for Pocket Insurance"))
+            genralinsurance = int(input("\t Type (1) for Health Insurance \t Type (2) for Motor Insurance "))
             if genralinsurance ==1:
-                healthinsurance = int(input("\t Type (1) for Individual Health Insurance \t Type (2) Family Health Insurance \t Type (3) for Sr. Citizens Insurance "))
+                healthinsurance = int(input("\t Type (1) for Individual Health Insurance \t Type (2) Family Health Insurance"))
                 if healthinsurance ==1:
                     typeinsurance =1
-                    healthinsurancecheck(typeinsurance)
+                    res3=healthinsurancecheck(typeinsurance)
+                    if res3 is False:
+                        print("Your Are Note Eligible for Insurance")
+                    else:
+                        print("You Are Eligible soon You Will Get Call from Our Agent")
+
                 elif healthinsurance ==2:
                     typeinsurance =2
-                    healthinsurancecheck(typeinsurance)
-                elif healthinsurance ==3:
-                    typeinsurance =3
-                    healthinsurancecheck(typeinsurance)
+                    res4=healthinsurancecheck(typeinsurance)
+                    if res4 is False:
+                        print("Your Are Note Eligible for Insurance")
+                    else:
+                        print("You Are Eligible soon You Will Get Call from Our Agent")
+
                 else:
                     print("Wrong option")
 
             elif genralinsurance ==2:
-                motorinsurance = int(input("\t Type (1) for Two Wheeler Insurance \t Type (2) for Car Insurance \t Type (3) for Commercial Vehicle Insurance"))
+                motorinsurance = int(input("\t Type (1) for Two Wheeler Insurance \t Type (2) for Car Insurance"))
                 if motorinsurance ==1:
                     typeinsurance =1
-                    motorinsurancecheck(typeinsurance)
+                    res5=motorinsurancecheck(typeinsurance)
+                    if res5 is False:
+                        print("Your Are Note Eligible for Insurance")
+                    else:
+                        print("You Are Eligible soon You Will Get Call from Our Agent")
                 elif motorinsurance ==2:
                     typeinsurance =2
-                    motorinsurancecheck(typeinsurance)
-                elif motorinsurance ==3:
-                    typeinsurance =3
-                    motorinsurancecheck(typeinsurance)
-                else:
-                    print("Wrong option")
+                    res6=motorinsurancecheck(typeinsurance)
+                    if res6 is False:
+                        print("Your Are Note Eligible for Insurance")
+                    else:
+                        print("You Are Eligible soon You Will Get Call from Our Agent")
 
-            elif genralinsurance ==3:
-                typeinsurance = 'homeinsurance'
-            elif genralinsurance ==4:
-                pocketinsurance = int(input("\t Type (1) for Laptop Insurance \t Type (2) for Smartphone Insurance \t Type (3) for Tech Accesories Insurance"))
-                if pocketinsurance ==1:
-                    typeinsurance =1
-                    pocketinsurancecheck(typeinsurance)
-                elif pocketinsurance ==2:
-                    typeinsurance =2
-                    pocketinsurancecheck(typeinsurance)
-                elif pocketinsurance ==3:
-                    typeinsurance =3
-                    pocketinsurancecheck(typeinsurance)
                 else:
                     print("Wrong option")
 
@@ -614,8 +726,9 @@ def main():
         
 
         if (result1 and result2 and result3 and result4 and result5 and result6 and result7 and result8 and result9 and result10 and result11 and result12 and result13 and result14 and result15 and result16) is True:
-            print("Account Opened successfully")
-            print("Soon You will get Massege with Password and Id")
+            print("Your Details Send to Nearest Branch to Your Given Adress")
+            print("Soon You will get Massege with Temporary Password and Id")
+            print("If Your Account Crreted Successfully.")
         else:
             print()
             print()
